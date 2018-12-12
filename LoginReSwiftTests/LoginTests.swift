@@ -10,13 +10,19 @@ import XCTest
 @testable import LoginReSwift
 
 class LoginTests: XCTestCase {
+    var loginState: LoginState!
+    override func setUp() {
+        loginState = LoginState()
+    }
     func testWhenEmailAndPasswordAreNotInput() {
+        let action = LoginAction.credentialsChanged(username: "test", password: "")
+        let state = LoginReducer.reducer(action: action, state: loginState)
+        XCTAssertEqual(state, LoginState(authenticationScheme: .password(areCredentialsValid: false)))
     }
     func testWhenEmailAndPasswordAreInput() {
-        let state = LoginState()
         let action = LoginAction.credentialsChanged(username: "user@email.com", password: "T")
-        let newState = LoginReducer.reducer(action: action, state: state)
+        let state = LoginReducer.reducer(action: action, state: loginState)
         let expectedAuthScheme = AuthenticationScheme.password(areCredentialsValid: true)
-        XCTAssertEqual(newState, LoginState(authenticationScheme: expectedAuthScheme))
+        XCTAssertEqual(state, LoginState(authenticationScheme: expectedAuthScheme))
     }
 }
