@@ -1,23 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n2G-B1-mPq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="SD6-Y3-9bk">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="n2G-B1-mPq" customClass="ViewController" customModule="LoginReSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hib-8I-CMh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-5u-l7A" userLabel="Credential Container">
+                                <rect key="frame" x="62.5" y="148" width="250" height="371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w5-S4-0YC" userLabel="Email Label">
+                                        <rect key="frame" x="0.0" y="-5" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-ok-4vw" userLabel="Email TextField">
+                                        <rect key="frame" x="0.0" y="20" width="250" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-rb-LBX" userLabel="Password Label">
+                                        <rect key="frame" x="0.0" y="65" width="74" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dg-Aa-SBt" userLabel="Password TextField">
+                                        <rect key="frame" x="0.0" y="90" width="250" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-Ui-OwX">
+                                        <rect key="frame" x="106" y="140" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1dg-Aa-SBt" firstAttribute="width" secondItem="6hP-ok-4vw" secondAttribute="width" id="2fL-Gz-qxB"/>
+                                    <constraint firstItem="6hP-ok-4vw" firstAttribute="centerX" secondItem="UPQ-5u-l7A" secondAttribute="centerX" id="EuV-Ff-YRd"/>
+                                    <constraint firstItem="Mvm-rb-LBX" firstAttribute="leading" secondItem="1dg-Aa-SBt" secondAttribute="leading" id="Ht0-TZ-UF7"/>
+                                    <constraint firstAttribute="width" constant="250" id="KQ5-7q-q93"/>
+                                    <constraint firstItem="1dg-Aa-SBt" firstAttribute="centerX" secondItem="6hP-ok-4vw" secondAttribute="centerX" id="LPb-N1-xnf"/>
+                                    <constraint firstItem="1dg-Aa-SBt" firstAttribute="top" secondItem="Mvm-rb-LBX" secondAttribute="bottom" constant="4" id="STK-9u-INP"/>
+                                    <constraint firstItem="6hP-ok-4vw" firstAttribute="top" secondItem="UPQ-5u-l7A" secondAttribute="top" constant="20" id="T51-hI-2Pn"/>
+                                    <constraint firstItem="1dg-Aa-SBt" firstAttribute="top" secondItem="6hP-ok-4vw" secondAttribute="bottom" constant="40" id="TOy-nj-O0j"/>
+                                    <constraint firstItem="0w5-S4-0YC" firstAttribute="leading" secondItem="6hP-ok-4vw" secondAttribute="leading" id="W5R-jW-rqw"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0w5-S4-0YC" secondAttribute="trailing" constant="20" symbolic="YES" id="X26-N9-NIp"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mvm-rb-LBX" secondAttribute="trailing" constant="20" symbolic="YES" id="YER-RC-ukw"/>
+                                    <constraint firstItem="6hP-ok-4vw" firstAttribute="top" secondItem="0w5-S4-0YC" secondAttribute="bottom" constant="4" id="eZb-de-aZ5"/>
+                                    <constraint firstItem="Nxv-Ui-OwX" firstAttribute="centerX" secondItem="1dg-Aa-SBt" secondAttribute="centerX" id="hhD-w8-mOt"/>
+                                    <constraint firstItem="6hP-ok-4vw" firstAttribute="width" secondItem="UPQ-5u-l7A" secondAttribute="width" id="i1h-qv-xfp"/>
+                                    <constraint firstItem="Nxv-Ui-OwX" firstAttribute="top" secondItem="6hP-ok-4vw" secondAttribute="bottom" constant="90" id="wVI-wX-RSW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="UPQ-5u-l7A" firstAttribute="centerY" secondItem="Hib-8I-CMh" secondAttribute="centerY" id="457-eb-Osw"/>
+                            <constraint firstItem="UPQ-5u-l7A" firstAttribute="centerX" secondItem="Hib-8I-CMh" secondAttribute="centerX" id="B5t-OO-JVR"/>
+                            <constraint firstItem="UPQ-5u-l7A" firstAttribute="top" secondItem="Iwo-ic-s81" secondAttribute="top" constant="128" id="Etq-yB-Ql9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Iwo-ic-s81"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6hP-ok-4vw" id="zWj-6i-sYh"/>
+                        <outlet property="loginButton" destination="Nxv-Ui-OwX" id="aOw-ND-0XZ"/>
+                        <outlet property="passwordTextField" destination="1dg-Aa-SBt" id="Z00-Vt-ljX"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zg-Og-ZSb" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
